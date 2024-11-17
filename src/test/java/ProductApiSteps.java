@@ -1,13 +1,14 @@
-package com.example.steps;
+package com.nagmat.steps;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import io.rest-assured.RestAssured;
-import io.rest-assured.response.Response;
+import io.restassured.RestAssured;
+import io.restassured.response.Response;
 
 import static org.hamcrest.Matchers.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+
 
 public class ProductApiSteps {
 
@@ -15,7 +16,7 @@ public class ProductApiSteps {
 
     @Given("I set the base URI for the API")
     public void i_set_the_base_uri_for_the_api() {
-        RestAssured.baseURI = "http://localhost:8080/productapi"; // Adjust as needed
+        RestAssured.baseURI = "http://localhost:8080/productapi/products";
     }
 
     @When("I send a GET request to {string}")
