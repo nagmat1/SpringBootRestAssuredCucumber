@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 		features = "src/test/resources/features",
-		glue = "com.example.steps",
+		glue = "com.nagmat.steps",
 		plugin = {"pretty", "html:target/cucumber-reports.html"},
 		monochrome = true)
 
@@ -17,7 +17,7 @@ import org.junit.runner.RunWith;
 class ProductrestapiApplicationTests {
 
 	@Test
-	void contextLoads() {
+	public void testProductAPI() {
 	}
 
 }
